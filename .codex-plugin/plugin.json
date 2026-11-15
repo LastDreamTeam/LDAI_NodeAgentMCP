@@ -1,0 +1,11 @@
+{
+  "name": "nodeagent",
+  "version": "0.2.0",
+  "description": "NodeAgentServer 与 NodeAgentClient 的独立 stdio MCP 连接器。",
+  "license": "AGPL-3.0-only",
+  "repository": "https://github.com/LastDreamTeam/LDAI_NodeAgentMCP",
+  "mcpServers": "../mcp.json",
+  "skills": [
+    "../skills/nodeagent"
+  ]
+}

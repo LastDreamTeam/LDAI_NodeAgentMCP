@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "nodeagent": {
+      "command": "python",
+      "args": [
+        "router.py"
+      ]
+    }
+  }
+}

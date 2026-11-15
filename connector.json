@@ -1,0 +1,31 @@
+{
+  "id": "nodeagent",
+  "version": "0.2.0",
+  "repository": "https://github.com/LastDreamTeam/LDAI_NodeAgentMCP",
+  "runtime": "python",
+  "toolPrefixes": [
+    "nodeagent_"
+  ],
+  "providerEnvironment": [
+    "NODEAGENT_SERVER_URL",
+    "NODEAGENT_TLS_FINGERPRINT",
+    "NODEAGENT_BOT_NAME",
+    "NODEAGENT_FRAMEWORK",
+    "NODEAGENT_MODEL",
+    "NODEAGENT_PROFILE_DIR",
+    "NODEAGENT_TOKEN_FILE",
+    "NODEAGENT_CLIENT_STATE_DIR",
+    "NODEAGENT_AUTO_REGISTER"
+  ],
+  "requiredMulti": [
+    "NODEAGENT_SERVER_URL",
+    "NODEAGENT_PROFILE_DIR"
+  ],
+  "title": "NodeAgent Fleet & Desktop Connector",
+  "managerFields": {
+    "NODEAGENT_SERVER_URL": "NodeAgentServer 地址",
+    "NODEAGENT_TLS_FINGERPRINT": "TLS 叶证书 SHA256 指纹（可选）",
+    "NODEAGENT_BOT_NAME": "Bot 注册显示名称",
+    "NODEAGENT_PROFILE_DIR": "本机身份与账本目录"
+  }
+}

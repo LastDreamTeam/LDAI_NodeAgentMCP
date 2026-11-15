@@ -1,0 +1,23 @@
+{
+  "connector": "nodeagent",
+  "accounts": {
+    "main": {
+      "label": "主舰队节点",
+      "env": {
+        "NODEAGENT_SERVER_URL": "https://nodeagent.example.org:8888",
+        "NODEAGENT_BOT_NAME": "Example-Bot",
+        "NODEAGENT_FRAMEWORK": "hermes",
+        "NODEAGENT_PROFILE_DIR": "~/.config/ldai-mcp/nodeagent/profiles/main"
+      }
+    },
+    "staging": {
+      "label": "测试舰队节点",
+      "env": {
+        "NODEAGENT_SERVER_URL": "https://staging-nodeagent.example.org:8888",
+        "NODEAGENT_BOT_NAME": "Example-Staging-Bot",
+        "NODEAGENT_FRAMEWORK": "dsh",
+        "NODEAGENT_PROFILE_DIR": "~/.config/ldai-mcp/nodeagent/profiles/staging"
+      }
+    }
+  }
+}

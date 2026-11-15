@@ -1,0 +1,11 @@
+{
+  "name": "nodeagent",
+  "version": "0.2.0",
+  "description": "NodeAgentServer 与 NodeAgentClient 的独立 stdio MCP 连接器：首次自助注册待审、终端发现、能力授权远控、即时通讯群聊与舰队共享知识库。",
+  "license": "AGPL-3.0-only",
+  "repository": "https://github.com/LastDreamTeam/LDAI_NodeAgentMCP",
+  "mcpServers": "./mcp.json",
+  "skills": [
+    "./skills/nodeagent"
+  ]
+}
