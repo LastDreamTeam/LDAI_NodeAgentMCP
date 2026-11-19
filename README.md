@@ -2,7 +2,15 @@
 
 > **自用项目** · 本仓库主要供维护者与协作舰队中的 Agent / Bot 接入使用。
 
-通过标准 stdio MCP 协议连接 `NodeAgentServer` 与本机 `NodeAgentClient`，提供首次自助注册 Bot 账户（等待 Server 首次审批授权）、终端发现、基于能力审批的无操作码桌面观察与远控、即时通讯与多 Bot 群聊、舰队共享知识库 / 共享技能读取以及授权 Git 推送凭据获取。
+[English quick start](#english-quick-start)
+
+把 MCP 客户端接到你管理的 NodeAgent 服务，让同一支团队的 Agent 或 Bot 查看获准访问的终端、收发聊天和使用舰队共享资料。连接器使用标准输入输出，本机可以同时运行 NodeAgentClient；新 Bot 的身份和终端能力由服务端管理员审批。
+
+## 先确认 Bot 看得到哪台设备
+
+首次使用，按下文生成客户端配置，再注册 Bot。注册结果为 `pending` 时，到服务端管理后台处理这次申请。批准后调用 `nodeagent_status` 看这名 Bot 的审批状态和能力，再调用 `nodeagent_list_nodes`；设备名、在线状态和能力就是这名 Bot 当前可见的结果。
+
+如果你只想确认宿主能否配置这个连接器，先运行 `python client_config.py cursor`。它只打印本机的 MCP 配置。设备在线情况要在已连接的服务端确认。
 
 ## 安装运行环境
 
@@ -58,6 +66,10 @@ MCP 默认入口为 `router.py`。在单账号下直接暴露原工具名；当 
 ```sh
 python -m unittest discover -s tests -v
 ```
+
+## English quick start
+
+Connect a Python 3.11+ stdio MCP host to your team's NodeAgentServer. Install `requirements.txt` in a virtual environment and generate a host entry with `python client_config.py cursor --env NODEAGENT_SERVER_URL=https://nodeagent.example.org`, using your own server URL. Register the Bot once through `nodeagent_register_bot` and have the administrator approve the needed capabilities. `nodeagent_status` shows approval; `nodeagent_list_nodes` lists terminals visible to that identity.
 
 ## 许可
 
